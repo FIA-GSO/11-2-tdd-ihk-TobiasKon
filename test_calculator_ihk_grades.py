@@ -35,13 +35,13 @@ testdata_calc_ihk_grade__negative_tests = [
     ("text", "TypeError")
 ]
 
-@pytest.mark.parametrize("punkte, max_punkte, ergebnis", testdata_percentage_calculator__positive_tests)
-def test_percentage_calculator__positive_tests(punkte, max_punkte, ergebnis):
-    assert percentage_calculator(punkte, max_punkte) == ergebnis
+@pytest.mark.parametrize("points, max_points, result", testdata_percentage_calculator__positive_tests)
+def test_percentage_calculator__positive_tests(points, max_points, result):
+    assert percentage_calculator(points, max_points) == result
 
-@pytest.mark.parametrize("punkte, max_punkte, ergebnis", testdata_percentage_calculator__negative_tests)
-def test_percentage_calculator__negative_tests(punkte, max_punkte, ergebnis):
-    assert percentage_calculator(punkte, max_punkte) == ergebnis
+@pytest.mark.parametrize("points, max_points, result", testdata_percentage_calculator__negative_tests)
+def test_percentage_calculator__negative_tests(points, max_points, result):
+    assert percentage_calculator(points, max_points) == result
 
 @pytest.mark.parametrize("percentage_value, grade", testdata_calc_ihk_grade__positive_tests)
 def test_calc_ihk_grade__positive_tests(percentage_value, grade):
