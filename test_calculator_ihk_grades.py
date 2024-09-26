@@ -14,7 +14,7 @@ testdata_percentage_calculator__negative_tests = [
     (10, "text", "TypeError")
 ]
 
-testdata_calc_grade__positive_tests = [
+testdata_calc_ihk_grade__positive_tests = [
     (100, "sehr gut"),
     (92, "sehr gut"),
     (91, "gut"),
@@ -29,7 +29,7 @@ testdata_calc_grade__positive_tests = [
     (0, "ungenügend")
 ]
 
-testdata_calc_grade__negative_tests = [
+testdata_calc_ihk_grade__negative_tests = [
     (101, "ValueError"),
     (-1, "ValueError"),
     ("text", "TypeError")
@@ -44,9 +44,9 @@ def test_percentage_calculator__negative_tests(punkte, max_punkte, ergebnis):
     assert percentage_calculator(punkte, max_punkte) == ergebnis
 
 @pytest.mark.parametrize("percentage_value, grade", testdata_calc_grade__positive_tests)
-def test_calc_grade__positive_tests(percentage_value, grade):
-    assert calc_grade(percentage_value) == grade
+def test_calc_ihk_grade__positive_tests(percentage_value, grade):
+    assert calc_ihk_grade(percentage_value) == grade
 
 @pytest.mark.parametrize("percentage_value, grade", testdata_calc_grade__negative_tests)
-def test_calc_grade__negative_tests(percentage_value, grade):
-    assert calc_grade(percentage_value) == grade
+def test_calc_ihk_grade__negative_tests(percentage_value, grade):
+    assert calc_ihk_grade(percentage_value) == grade
