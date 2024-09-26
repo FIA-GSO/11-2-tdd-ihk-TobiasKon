@@ -43,10 +43,10 @@ def test_percentage_calculator__positive_tests(punkte, max_punkte, ergebnis):
 def test_percentage_calculator__negative_tests(punkte, max_punkte, ergebnis):
     assert percentage_calculator(punkte, max_punkte) == ergebnis
 
-@pytest.mark.parametrize("percentage_value, grade", testdata_calc_grade__positive_tests)
+@pytest.mark.parametrize("percentage_value, grade", testdata_calc_ihk_grade__positive_tests)
 def test_calc_ihk_grade__positive_tests(percentage_value, grade):
     assert calc_ihk_grade(percentage_value) == grade
 
-@pytest.mark.parametrize("percentage_value, grade", testdata_calc_grade__negative_tests)
+@pytest.mark.parametrize("percentage_value, grade", testdata_calc_ihk_grade__negative_tests)
 def test_calc_ihk_grade__negative_tests(percentage_value, grade):
     assert calc_ihk_grade(percentage_value) == grade
